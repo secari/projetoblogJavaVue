@@ -4,10 +4,12 @@
       <div v-for="post in posts" :key="post.id">
         <div class="sessaoDeInicio">
           <h1 class="postTitulo"><a :href="'/post/'+ post.id">{{ post.titulo }}</a></h1>
+
           <ul>
             <li class="catTitulo" v-for="cat in post.categorias" :key="cat.id"><a
                 :href="'/categoria/' + post.id">{{ cat.titulo }}</a></li>
           </ul>
+
           <p class="postDescricao">{{ post.descricao }}</p>
 
           <b-button class="botaoLerMais" variant = "info" :href="'/post/'+ post.id">Ler mais</b-button>

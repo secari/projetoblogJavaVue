@@ -6,6 +6,7 @@ import config from "@/config";
 import Router from "vue-router"
 import main from "@/layout/main";
 import Home from "@/views/Home";
+import Categorias from "@/views/Categorias";
 import Categoria from "@/views/Categoria";
 import Post from "@/views/Post";
 import axios from 'axios';
@@ -37,6 +38,11 @@ const router = new Router({
                 path: '/categoria/:id',
                 name: 'categoria',
                 component: Categoria
+            },
+            {
+                path: '/categorias',
+                name: 'categorias',
+                component: Categorias
             },
             {
                 path: '/post/:id',

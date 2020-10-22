@@ -12,7 +12,7 @@
                 <b-nav-item href="http://localhost:8081/">Home</b-nav-item>
               </div>
 
-              <b-nav-item href="/categoria/all"> Categorias </b-nav-item>
+              <b-nav-item :href="'/categorias/'"> Categorias </b-nav-item>
 
               <div>
                 <b-button variant="outline-info" class="botaoLogout">
@@ -30,11 +30,11 @@
 
 <script>
 
-import Categoria from "@/views/Categoria";
+import Categorias from "@/views/Categorias";
 
 export default {
   name: 'Header',
-  Categoria,
+  Categorias,
 }
 </script>
 

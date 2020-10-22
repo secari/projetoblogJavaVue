@@ -1,6 +1,6 @@
-#Home{
-    background: linear-gradient(#fefefe,#888888);
-}
+/*#Home{*/
+/*    background: linear-gradient(#fefefe,#888888);*/
+/*}*/
 
 
 .header1 {
@@ -53,7 +53,7 @@ a {
 a:hover {
     text-decoration: underline;
 
-    color: #17a2b8;
+    color: #000;
 
     transition: 0.5s all;
 }
@@ -73,7 +73,7 @@ a:hover {
     height: 500px;
     max-width: 400px;
 
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 30px;
 
     background: transparent;
@@ -82,7 +82,8 @@ a:hover {
 .sessaoDeInicio:hover{
     border-color: #17a2b8;
 
-    transition: 1ms all;
+    transform: scale(1.05);
+    transition: 150ms all;
 
     border-right: solid #17a2b8;
     border-bottom: solid #17a2b8;
@@ -100,5 +101,65 @@ a:hover {
     text-align: center;
 
     color: black;
+    font-weight: bold;
+}
+
+.botaoLerMais:hover {
+    transform: scale(1.2);
+    transition: 1s all;
+    background: #0b7e90;
+}
+
+.postsTitulo {
+    text-align: center;
+    border-left: solid 1px;
+    border-top: solid 1px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 40%;
+}
+
+.postsTitulo:hover {
+    transform: scale(1.1);
+    border: solid 1px #0b7e90;
+    transition: 0.5s all;
+}
+
+.categoriasItens {
+    position: relative;
+    text-align: center;
+
+}
+
+.sessaoDeCategorias {
+    left: 50px;
+
+    position: relative;
+
+    border: solid 2px;
+    border-radius: 20px;
+
+    padding-top: 80px;
+
+    height: 300px;
+    width: 30em;
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    background: transparent;
+}
+
+.sessaoDeCategorias:hover {
+    transform: scale(1.05);
+    transition: 1s all;
+
+    background: linear-gradient(to right, #ffffff 50%,#17a2b8 , #0b7e90);
+}
+
+.categoriasDescricao{
+    padding-top: 10px;
+    font-size: 25px;
     font-weight: bold;
 }
