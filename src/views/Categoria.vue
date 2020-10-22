@@ -1,14 +1,27 @@
 <template>
   <div v-if="categoria">
-    <h1>{{categoria.titulo}}</h1>
+    <div class="row">
+      <div class="container">
+          <h1 class="catTitulo"><a :href="'/categoria/'+ categoria.id">{{ categoria.titulo }}</a></h1>
+          <h2>{{categoria.descricao}}</h2>
+
+        <ul>
+          <li class="postTitulo" v-for="post in categoria.posts" :key="post.id"><a
+              :href="'/post/' + categoria.id">{{ post.titulo }}</a></li>
+        </ul>
+
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
 
 import axios from 'axios';
+import Post from "@/views/Post";
 
 export default {
+  Post,
   name: "Categoria",
   data(){
     return {

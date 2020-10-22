@@ -1,8 +1,104 @@
-.postCat{
+#Home{
+    background: linear-gradient(#fefefe,#888888);
+}
+
+
+.header1 {
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.homeTitulo {
+    font-family: fantasy;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: orange;
+}
+
+.header3{
+    position: relative;
+    left: 150px;
+    text-transform: uppercase;
+    display: flex;
+    padding-right: 4em;
+}
+
+#botaoHome{
+    padding-right: 4em;
+}
+
+.botaoLogout{
+    position: relative;
+    left: 660px;
+}
+
+.postCat {
+    padding-top: 20px;
     text-align: left;
 }
 
 .postTitulo {
+    margin-top: 20px;
+    font-weight: bold;
     position: relative;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+
+    color: #17a2b8;
+
+    transition: 0.5s all;
+}
+
+.sessaoDeInicio {
+    left: 50px;
+
+    position: relative;
+
+    border-left: solid #000000;
+    border-top: solid #000000;
+    border-radius: 20px;
+
+    padding-top: 100px;
+    padding-left: 20px;
+
+    height: 500px;
+    max-width: 400px;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    background: transparent;
+}
+
+.sessaoDeInicio:hover{
+    border-color: #17a2b8;
+
+    transition: 1ms all;
+
+    border-right: solid #17a2b8;
+    border-bottom: solid #17a2b8;
+}
+
+.catTitulo{
+    position: relative;
+
+    text-align: left;
+}
+
+.postDescricao{
+    padding: 20px;
+
+    text-align: center;
+
+    color: black;
+    font-weight: bold;
 }
