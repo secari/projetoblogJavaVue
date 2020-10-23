@@ -10,6 +10,7 @@ import Categorias from "@/views/Categorias";
 import Categoria from "@/views/Categoria";
 import Post from "@/views/Post";
 import axios from 'axios';
+import Login from "@/views/Login";
 
 axios.defaults.baseURL = config.url;
 
@@ -30,6 +31,11 @@ const router = new Router({
         path: '/',
         children: [
             {
+                path: '/',
+                name: 'login',
+                component: Login
+            },
+                {
                 path: '/',
                 name: 'home',
                 component: Home

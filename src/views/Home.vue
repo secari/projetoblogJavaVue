@@ -7,7 +7,7 @@
 
           <ul>
             <li class="catTitulo" v-for="cat in post.categorias" :key="cat.id"><a
-                :href="'/categoria/' + post.id">{{ cat.titulo }}</a></li>
+                :href="'/categoria/' + cat.id">{{ cat.titulo }}</a></li>
           </ul>
 
           <p class="postDescricao">{{ post.descricao }}</p>
