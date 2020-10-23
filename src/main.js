@@ -8,9 +8,11 @@ import main from "@/layout/main";
 import Home from "@/views/Home";
 import Categorias from "@/views/Categorias";
 import Categoria from "@/views/Categoria";
+import CadastroCategoria from "@/views/CadastroCategoria";
 import Post from "@/views/Post";
 import axios from 'axios';
 import Login from "@/views/Login";
+import CadastroPost from "@/views/CadastroPost";
 
 axios.defaults.baseURL = config.url;
 
@@ -49,6 +51,15 @@ const router = new Router({
                 path: '/categorias',
                 name: 'categorias',
                 component: Categorias
+            },            {
+                path: '/categoria',
+                name: 'cadCategorias',
+                component: CadastroCategoria
+            },
+            {
+                path: '/post',
+                name: 'cadPost',
+                component: CadastroPost
             },
             {
                 path: '/post/:id',

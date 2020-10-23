@@ -12,7 +12,14 @@
 
           <p class="postDescricao">{{ post.descricao }}</p>
 
-          <b-button class="botaoLerMais" variant = "info" :href="'/post/'+ post.id">Ler mais</b-button>
+          <b-button class="botaoLerMais" variant="info" :href="'/post/'+ post.id">Ler mais</b-button>
+        </div>
+
+        <div class="barraLateral">
+
+          <div v-for="cats in categorias" :key="cats.id">
+            <h1 class="categoriaTitulo"><a :href="'/categoria/' + cats.id">{{ cats.titulo }}</a></h1>
+          </div>
 
         </div>
       </div>
@@ -65,20 +72,20 @@ export default {
           console.log(e.response);
         })
       },
-      name: "Login",
+      name: "Categorias",
       data() {
         return {
-          login: null
+          categorias: []
         }
       },
       mounted() {
-        this.getLogin()
+        this.getCategorias()
       },
       methods: {
-        getLogin() {
-          axios.get('auth').then(response => {
-            this.login = response.data.data;
-            console.log(this.login);
+        getCategorias() {
+          axios.get('v1/categoria/all').then(response => {
+            this.categorias = response.data.data.content;
+            console.log(this.categorias);
           }).catch(e => {
             console.log(e);
             console.log(e.response);
