@@ -18,7 +18,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -65,6 +64,26 @@ export default {
           console.log(e);
           console.log(e.response);
         })
+      },
+      name: "Login",
+      data() {
+        return {
+          login: null
+        }
+      },
+      mounted() {
+        this.getLogin()
+      },
+      methods: {
+        getLogin() {
+          axios.get('auth').then(response => {
+            this.login = response.data.data;
+            console.log(this.login);
+          }).catch(e => {
+            console.log(e);
+            console.log(e.response);
+          })
+        }
       }
     }
   }

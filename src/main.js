@@ -32,13 +32,13 @@ const router = new Router({
         children: [
             {
                 path: '/',
-                name: 'login',
-                component: Login
-            },
-                {
-                path: '/',
                 name: 'home',
                 component: Home
+            },
+            {
+                path: '/',
+                name: 'auth',
+                component: Login
             },
             {
                 path: '/categoria/:id',
